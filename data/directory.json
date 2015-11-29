@@ -7,6 +7,7 @@
       "shortDepromo": "$850.00 - $1199.99",
       "description": "$850.00 - $1199.99",
       "cover":"burger.jpg",
+      "price": 50,
       "starProduct": {
         "name": "Hamburguesa Country",
         "description": "Deliciosa amburguesa angus 200 gr",
@@ -31,9 +32,10 @@
       },
       "online": "false",
       "loveBar": {
-        "raiting": "8.5",
-        "likes": "9879",
-        "dislikes": "342"
+        "rating": 8.5,
+        "likes": 987,
+        "dislikes": 342,
+        "clients":2344
       },
       "owner": {
         "id": "",
@@ -55,6 +57,7 @@
       "id": 2,
       "logo": "osama-logo.jpg",      
       "cover":"osama.jpg",
+      "price": 50,      
       "shortName": "Osama Tacos Árabes",
       "shortDescription": "$850.00 - $1199.99",
       "description": "$850.00 - $1199.99",
@@ -74,9 +77,10 @@
       "promo": null,
       "online": "false",
       "loveBar": {
-        "raiting": "8.5",
-        "likes": "9879",
-        "dislikes": "342"
+        "rating": 8.5,
+        "likes": 987,
+        "dislikes": 342,
+        "clients":2344
       },
       "owner": {
         "id": "",
@@ -100,6 +104,8 @@
       "shortName": "Mr. Burgs",
       "shortDescription": "$850.00 - $1199.99",
       "description": "$850.00 - $1199.99",
+      "cover":"burger.jpg",
+      "price": 50,
       "starProduct": {
         "name": "Hamburguesa Country",
         "description": "Deliciosa amburguesa angus 200 gr",
@@ -123,9 +129,10 @@
       },
       "online": "false",
       "loveBar": {
-        "raiting": "8.5",
-        "likes": "9879",
-        "dislikes": "342"
+        "rating": 8.5,
+        "likes": 987,
+        "dislikes": 342,
+        "clients":2344
       },
       "owner": {
         "id": "",
@@ -172,7 +179,7 @@
       },
       "online": "false",
       "loveBar": {
-        "raiting": "8.5",
+        "rating": "8.5",
         "likes": "9879",
         "dislikes": "342"
       },

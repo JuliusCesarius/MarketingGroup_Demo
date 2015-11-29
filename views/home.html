@@ -61,22 +61,19 @@
                                     <a  class="star-product"><span class="zmdi zmdi-star-circle"></span><span>{{company.starProduct.name}} {{company.starProduct.price | currency}}</span></a>
                                 </div>
                                 <div class="card-body">
-                                    <div class="card-data">
-                                        <div class="loveBar">
-                                            
+                                    <div class="love-container">
+                                        <div class="love-bar" data-ng-style="{'width' : (company.loveBar.likes * 100 / (company.loveBar.likes + company.loveBar.likes)) + '%' }">
                                         </div>
-                                        <div class="love">
-                                            
-                                        </div>
-                                        <div class="rating">
-                                            
-                                        </div>
-                                        <div class="clients">
-                                            
-                                        </div>
-                                        <div class="price">
-                                            
-                                        </div>
+                                    </div>
+                                    <ul class="card-data">
+                                        <li class="love">
+                                            <span class="zmdi zmdi-wifi"></span>{{company.loveBar.likes}}
+                                        </li><li class="rating">
+                                            <span class="zmdi zmdi-star"></span>{{company.loveBar.rating}}
+                                        </li><li class="clients">
+                                            <span class="zmdi zmdi-account"></span>{{company.loveBar.clients}}
+                                        </li><li class="price">
+                                            <span class="zmdi zmdi-money-box"></span>${{company.price}}</li>
                                     <div>
                                 </div>
                             </div>
