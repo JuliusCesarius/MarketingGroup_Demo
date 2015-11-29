@@ -22,7 +22,7 @@ materialAdmin
         // By default template has a boxed layout
 
         //julius: always fixed
-        this.layoutType = '1';//localStorage.getItem('ma-layout-status');
+        //this.layoutType = '1';//localStorage.getItem('ma-layout-status');
         
         // For Mainmenu Active Class
         this.$state = $state;    
@@ -36,6 +36,8 @@ materialAdmin
             }
         }
         
+//
+
         //Listview Search (Check listview pages)
         this.listviewSearchStat = false;
         
@@ -162,7 +164,19 @@ materialAdmin
     
     })
 
+    
+    // =========================================================================
+    // Best Selling Widget
+    // =========================================================================
 
+    .controller('directoryCtrl', function(directoryService){
+        // Get Best Selling widget Data
+        this.img = directoryService.img;
+        this.name = directoryService.name;
+        this.range = directoryService.range; 
+        
+        this.result = directoryService.getDirectory(this.img, this.name, this.range);
+    })
 
     // =========================================================================
     // Best Selling Widget

@@ -18,6 +18,23 @@ materialAdmin
     
 
     // =========================================================================
+    // Directory Widget Data (Home Page)
+    // =========================================================================
+
+    .service('directoryService', ['$resource', function($resource){
+        this.getDirectory = function(img, name, range) {
+            var gDirList = $resource("data/directory.json");
+            
+            return gDirList.get({
+                img: img,
+                name: name,
+                range: range,
+            });
+        }
+    }])
+
+
+    // =========================================================================
     // Best Selling Widget Data (Home Page)
     // =========================================================================
 
@@ -28,7 +45,7 @@ materialAdmin
             return gbList.get({
                 img: img,
                 name: name,
-                range: range,
+                range: range
             });
         }
     }])

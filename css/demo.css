@@ -1,6 +1,9 @@
 /*
  * Following CSS codes are used only for demo purpose thus you can remove them completly whenever you want. 
  */
+body{
+    background-color: black;
+}
 
 .toggle-switch .ts-label {
     min-width: 130px;

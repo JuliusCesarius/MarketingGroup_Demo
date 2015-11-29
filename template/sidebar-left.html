@@ -6,7 +6,7 @@
             </div>
 
             <div class="profile-info">
-                Sergio Varai
+                Sergio Baray
 
                 <i class="zmdi zmdi-caret-down"></i>
             </div>
@@ -27,14 +27,33 @@
             </li>
         </ul>
     </div>
-
+    <div class="main-menu-title ng-scope">
+        Panel de Control
+    </div>
     <ul class="main-menu">
         <li data-ui-sref-active="active">
-            <a data-ui-sref="home" data-ng-click="mactrl.sidebarStat($event)"><i class="zmdi zmdi-home"></i> Homes</a>
+            <a data-ui-sref="home" data-ng-click="mactrl.sidebarStat($event)"><i class="zmdi zmdi-home"></i> Directorio</a>
         </li>
+        <li class="sub-menu" data-ng-class="{ 'active toggled': mactrl.$state.includes('widgets') }">
+            <a href="" toggle-submenu><i class="zmdi zmdi-trending-up"></i> Widgets</a>
+
+            <ul>
+                <li><a data-ui-sref-active="active" data-ui-sref="widgets.widget-templates" data-ng-click="mactrl.sidebarStat($event)">Templates</a></li>
+                <li><a data-ui-sref-active="active" data-ui-sref="widgets.widgets" data-ng-click="mactrl.sidebarStat($event)">Widgets</a></li>
+            </ul>
+        </li>
+        <li data-ui-sref-active="active">
+            <a data-ui-sref="calendar" data-ng-click="mactrl.sidebarStat($event)"><i class="zmdi zmdi-calendar"></i> Calendario</a>
+        </li>
+        <li data-ui-sref-active="active">
+            <a data-ui-sref="map" data-ng-click="mactrl.sidebarStat($event)"><i class="zmdi zmdi-portable-wifi"></i> Mapa</a>
+        </li>
+        
+        <!--
         <li data-ui-sref-active="active">
             <a data-ui-sref="typography" data-ng-click="mactrl.sidebarStat($event)"><i class="zmdi zmdi-format-underlined"></i> Typography</a>
         </li>
+
         <li class="sub-menu" data-ng-class="{ 'active toggled': mactrl.$state.includes('widgets') }">
             <a href="" toggle-submenu><i class="zmdi zmdi-widgets"></i> Widgets</a>
 
@@ -119,5 +138,6 @@
                 <li><a href="404.html">Error 404</a></li>
             </ul>
         </li>
+    -->
     </ul>
 </div>

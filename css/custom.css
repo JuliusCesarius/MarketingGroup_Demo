@@ -2,7 +2,7 @@
 /*Starts Crash_Dev defined code*/
 
 #header{
-	border-top:5px solid #ffec50;
+	border-top:5px solid #FEE600;
 	background-color:black;
 	padding-top:0;
 }
@@ -12,7 +12,7 @@
 }
 
 #footer{
-	background-color: #ffec50;
+	background-color: #FEE600;
 	bottom: 0px;
 	color:black;
 	height: 45px;
@@ -30,7 +30,7 @@
 }
 
 #toggle-width{
-	display:none;
+	/*display:none;*/
 }
 
 #top-search-wrap{
@@ -45,6 +45,9 @@
 #sidebar{
 	background-color:#282828;
 	color:white;
+}
+#sidebar .main-menu{
+	margin-top: 0;
 }
 
 #sidebar .main-menu > li > a {
@@ -71,97 +74,83 @@
 	text-transform: uppercase;
 }
 
-
-
-
-#yellowCardUpperBar{ 
-	height: 5px;
-	background-color: #ffec50;
-}
-
-#grayDividerBar{ 
-	height: 1px;
-	background-color: #999999;
-}
-
-.cardOfferHeader{
-	width: 100%;
-  	background-color: #000000;
-}
-
-.cardheader . 
-
-.cardOfferTitleBar{
-	width: 100%;
-  	/*height: 35px;*/
-  	padding-top: 5px;
-  	padding-bottom: 5px;
-  	color: #ffffff;
-  	font-size: 15px;
-}
-
-.cardOfferTitleBar img{
-	width: 17px;
-    height: 17px;
-    border-radius: 50%;
-    margin-left: 5px;
-    margin-right: 5px;
-    background-color: #ffffff; 
+.main-menu-title{
+	color:#ccc;
+	font-size:1.1em;
+	padding-left:1.5em;
+	padding-bottom:0;
+	padding-top:1em;
+	text-transform: uppercase;
 }
 
 
-.cardOfferTitleBar h2 {
-    margin: 0;
-    line-height: 100%;
-    font-size: 17px;
-    font-weight: 400;
-    color: #ffffff;
+/***CARD'S STYLE****/
+.brand-header{
+	background-color:black;
+	color:white;
+	padding: 3em 1em 1em 1em;
+	width:100%;
 }
-
-.placeIndicatorBar{
+.brand-header a{
+	display:block;
+}
+.card-cover{
+	min-height: 293px;
+	background-position: 50% 50%;
+	background-size: cover;
 	overflow: hidden;
-  	height: 3px;
-  	margin-bottom: 0px;
-  	background-color: #999999;
-  	border-radius: 2px;
-  	-webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-  	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+.card-cover .short-name, .card-cover .star-product{
+	background-color:rgba(0,0,0,0);
+	display:block;
+	color:white;
+	font-size:1.3em;
+	margin-top:-3px;
+	padding-bottom:.5em;
+	text-align:center;
+	width:100%;
+	-webkit-box-shadow:inset 0 10px 30px 10px #000000;
+	box-shadow: inset 0 14px 22px 6px #000000;
 }
 
-.progressIndicatorBar{
-  float: left;
-  width: 0%;
-  height: 100%;
-  font-size: 12px;
-  line-height: 18px;
-  color: #ffffff;
-  text-align: center;
-  background-color: #ff0043;
-  -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
-  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
-  -webkit-transition: width 0.6s ease;
-  -o-transition: width 0.6s ease;
-  transition: width 0.6s ease;
+.card-cover .star-product{
+	background-color:rgba(0,0,0,.6);
+	bottom:0;
+	padding:.5em;
+	position:absolute;
+	text-align:left;
+	-webkit-box-shadow:none;
+	box-shadow:none;
 }
 
-.interaction-panel{
-	width: 100%;
-	height: 40px;
-	background-color: #343434;
+.brand-header a img{
+}
+.card .offer{
+	font-size: 1.2em;
+	position:absolute;
+	width:100%;
+	z-index: 2;
+}
+.card .offer a{
+		background-color: #FEE600;
+		color: black;
+		display: block;
+		font-family: Arial!important;
+		padding: .3em 1em;
+		-webkit-transition: all .1s ease-out;
+		-moz-transition: all .1s ease-out;
+		-ms-transition: all .1s ease-out;
+		-o-transition: all .1s ease-out;
+		transition: all .1s ease-out;
+	}
+
+.card .offer a:hover{
+	background-color:black;
+	color:#FEE600;
+	cursor:pointer;
+	font-size:1.1em;
 }
 
-.information-panel{
-	width: 100%;
-	height: 40px;
-	background-color: #343434;
+.card .offer a .zmdi{
+	margin-right:1em;
 }
-
-#main-menu-title{
-	margin-left: 20px;
-	margin-bottom: 10px;
-	width: 130px;
-	font-weight: bold;
-	color: #999999;
-}
-
-/*Ends Crash_Dev defined code*/
