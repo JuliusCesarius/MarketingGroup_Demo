@@ -11,7 +11,8 @@ materialAdmin
         
             .state ('home', {
                 url: '/home',
-                templateUrl: 'views/home.html',
+                templateUrl: 'views/home.html'
+                /*,
                 resolve: {
                     loadPlugin: function($ocLazyLoad) {
                         return $ocLazyLoad.load ([
@@ -33,7 +34,7 @@ materialAdmin
                             }
                         ])
                     }
-                }
+                }*/
             })
         
 

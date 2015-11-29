@@ -46,44 +46,43 @@
 
             <div class="row">
                 <div class="col-xs-12" data-ng-controller="directoryCtrl as dirctrl">
-                    <!-- Directory -->
-                    <div class="company col-xs-12 col-md-6 col-lg-4" data-ng-repeat="company in dirctrl.result.list">
-                        <div class="card">
-                            <div class="offer">
-                                <a><span class="zmdi zmdi-local-offer"></span>{{company.promo.name}}</a>
+                    <div class="row">
+                        <!-- Directory -->
+                        <div class="company col-xs-12 col-md-6 col-lg-4" data-ng-repeat="company in dirctrl.result.list">
+                            <div class="card">
+                                <div class="offer" data-ng-if="company.promo && company.promo.name !== ''">
+                                    <a><span class="zmdi zmdi-local-offer"></span>{{company.promo.name}}</a>
+                                </div>
+                                <div class="brand-header">
+                                    <a class="text-center"><img src="img/custom/logos/{{company.id}}/{{company.logo}}"/></a>
+                                </div>
+                                <div class="card-cover" data-ng-style="{'background-image':'url(img/custom/covers/' + company.id +'/' + company.cover + ')'}">
+                                    <span class="short-name">{{company.shortName}}</span>
+                                    <a  class="star-product"><span class="zmdi zmdi-star-circle"></span><span>{{company.starProduct.name}} {{company.starProduct.price | currency}}</span></a>
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-data">
+                                        <div class="loveBar">
+                                            
+                                        </div>
+                                        <div class="love">
+                                            
+                                        </div>
+                                        <div class="rating">
+                                            
+                                        </div>
+                                        <div class="clients">
+                                            
+                                        </div>
+                                        <div class="price">
+                                            
+                                        </div>
+                                    <div>
+                                </div>
                             </div>
-                            <div class="brand-header">
-                                <a class="text-center"><img src="img/custom/logos/{{company.id}}/{{company.logo}}"/></a>
-                            </div>
-                            <div class="card-cover" data-ng-style="{'background-image':'url(img/custom/covers/' + company.id +'/' + company.cover + ')'}">
-                                <span class="short-name">{{company.shortName}}</span>
-                                <span class="star-product">{{company.starProduct.name}}</span>
-                            </div>
-                            <div class="card-body">
-                                <div class="start-product">
-                                    <a><span></span></a>
-                                </data>
-                                <div class="card-data">
-                                    <div class="loveBar">
-                                        
-                                    </div>
-                                    <div class="love">
-                                        
-                                    </div>
-                                    <div class="rating">
-                                        
-                                    </div>
-                                    <div class="clients">
-                                        
-                                    </div>
-                                    <div class="price">
-                                        
-                                    </div>
-                                <div>
-                            </div>
-                        </div>
-                        <div class="card-detail">
+                            <div class="card-detail">
 
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -92,4 +91,4 @@
     </section>
 </section>
 
-<footer id="footer" data-ng-include="'template/footer.html'"></footer>
+<footer class="hidden-xs hidden-sm" id="footer" data-ng-include="'template/footer.html'"></footer>

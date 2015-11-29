@@ -10,7 +10,8 @@
       "starProduct": {
         "name": "Hamburguesa Country",
         "description": "Deliciosa amburguesa angus 200 gr",
-        "picture": "burger.jpg"
+        "picture": "burger.jpg",
+        "price":"55.00"
       },
       "category": "Restaurante",
       "contactInfo": {
@@ -51,9 +52,10 @@
       "": ""
     },
     {
-      "id": 1,
-      "logo": "logos/mrBurgs.jpg",
-      "shortName": "Mr. Burgs",
+      "id": 2,
+      "logo": "osama-logo.jpg",      
+      "cover":"osama.jpg",
+      "shortName": "Osama Tacos Árabes",
       "shortDescription": "$850.00 - $1199.99",
       "description": "$850.00 - $1199.99",
       "starProduct": {
@@ -93,7 +95,7 @@
       "": ""
     },
     {
-      "id": 1,
+      "id": 3,
       "logo": "logos/mrBurgs.jpg",
       "shortName": "Mr. Burgs",
       "shortDescription": "$850.00 - $1199.99",
@@ -142,7 +144,7 @@
       "": ""
     },
     {
-      "id": 1,
+      "id": 4,
       "logo": "logos/mrBurgs.jpg",
       "shortName": "Mr. Burgs",
       "shortDescription": "$850.00 - $1199.99",

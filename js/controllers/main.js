@@ -15,29 +15,23 @@ materialAdmin
 
         // By default Sidbars are hidden in boxed layout and in wide layout only the right sidebar is hidden.
         this.sidebarToggle = {
-            left: true,
-            right: true
+            left: false,
+            right: false
         }
 
         // By default template has a boxed layout
-
-        //julius: always fixed
-        //this.layoutType = '1';//localStorage.getItem('ma-layout-status');
+        this.layoutType = localStorage.getItem('ma-layout-status');
         
         // For Mainmenu Active Class
         this.$state = $state;    
         
         //Close sidebar on click
         this.sidebarStat = function(event) {
-            //return
             if (!angular.element(event.target).parent().hasClass('active')) {
-                //julius: always true
-                this.sidebarToggle.left = true;
+                this.sidebarToggle.left = false;
             }
         }
         
-//
-
         //Listview Search (Check listview pages)
         this.listviewSearchStat = false;
         
@@ -73,7 +67,6 @@ materialAdmin
         }
         
         // Get messages and notification for header
-        //
         this.img = messageService.img;
         this.user = messageService.user;
         this.user = messageService.text;
@@ -164,7 +157,7 @@ materialAdmin
     
     })
 
-    
+
     // =========================================================================
     // Best Selling Widget
     // =========================================================================
