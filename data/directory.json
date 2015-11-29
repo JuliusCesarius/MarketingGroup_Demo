@@ -99,17 +99,18 @@
       "": ""
     },
     {
-      "id": 3,
-      "logo": "logos/mrBurgs.jpg",
-      "shortName": "Mr. Burgs",
-      "shortDescription": "$850.00 - $1199.99",
+      "id": 1,
+      "logo": "burger-logo-sm.png",
+      "shortName": "Hamburguesas Artesanales",
+      "shortDepromo": "$850.00 - $1199.99",
       "description": "$850.00 - $1199.99",
       "cover":"burger.jpg",
       "price": 50,
       "starProduct": {
         "name": "Hamburguesa Country",
         "description": "Deliciosa amburguesa angus 200 gr",
-        "picture": "hamburguerContry.jpg"
+        "picture": "burger.jpg",
+        "price":"55.00"
       },
       "category": "Restaurante",
       "contactInfo": {
@@ -120,8 +121,8 @@
         "direction": "2134123412, 1234123412"
       },
       "promo": {
-        "id": "",
-        "name": "",
+        "id": "123",
+        "name": "2 x 1 en amburguesa sencilla",
         "description": "",
         "restrinctions": "",
         "startDate": "",
@@ -151,9 +152,11 @@
       "": ""
     },
     {
-      "id": 4,
-      "logo": "logos/mrBurgs.jpg",
-      "shortName": "Mr. Burgs",
+      "id": 2,
+      "logo": "osama-logo.jpg",      
+      "cover":"osama.jpg",
+      "price": 50,      
+      "shortName": "Osama Tacos Árabes",
       "shortDescription": "$850.00 - $1199.99",
       "description": "$850.00 - $1199.99",
       "starProduct": {
@@ -169,9 +172,55 @@
         "adress": "New Street 34, Santa Lucía, Cuahutemoc, Distrito Federal",
         "direction": "2134123412, 1234123412"
       },
-      "promo": {
+      "promo": null,
+      "online": "false",
+      "loveBar": {
+        "rating": 8.5,
+        "likes": 987,
+        "dislikes": 342,
+        "clients":2344
+      },
+      "owner": {
         "id": "",
-        "name": "",
+        "name": "Sergio Baray",
+        "contact": ""
+      },
+      "openingTimes": [
+        {
+          "Lunes a viernes": "9 pm - 6 pm",
+          "Sábados": "9 pm - 2 pm",
+          "Domingo": "9 pm - 12 pm"
+        }
+      ],
+      "store": {},
+      "event": "",
+      "": ""
+    },
+    {
+      "id": 1,
+      "logo": "burger-logo-sm.png",
+      "shortName": "Hamburguesas Artesanales",
+      "shortDepromo": "$850.00 - $1199.99",
+      "description": "$850.00 - $1199.99",
+      "cover":"burger.jpg",
+      "price": 50,
+      "starProduct": {
+        "name": "Hamburguesa Country",
+        "description": "Deliciosa amburguesa angus 200 gr",
+        "picture": "burger.jpg",
+        "price":"55.00"
+      },
+      "category": "Restaurante",
+      "contactInfo": {
+        "phoneNumber": "999999999",
+        "whatsapp": "999999999",
+        "email": "tiendita@gmail.com",
+        "adress": "New Street 34, Santa Lucía, Cuahutemoc, Distrito Federal",
+        "direction": "2134123412, 1234123412"
+      },
+      "promo": {
+        "id": "123",
+        "name": "2 x 1 en amburguesa sencilla",
         "description": "",
         "restrinctions": "",
         "startDate": "",
@@ -179,9 +228,55 @@
       },
       "online": "false",
       "loveBar": {
-        "rating": "8.5",
-        "likes": "9879",
-        "dislikes": "342"
+        "rating": 8.5,
+        "likes": 987,
+        "dislikes": 342,
+        "clients":2344
+      },
+      "owner": {
+        "id": "",
+        "name": "Sergio Baray",
+        "contact": ""
+      },
+      "openingTimes": [
+        {
+          "Lunes a viernes": "9 pm - 6 pm",
+          "Sábados": "9 pm - 2 pm",
+          "Domingo": "9 pm - 12 pm"
+        }
+      ],
+      "store": {},
+      "event": "",
+      "": ""
+    },
+    {
+      "id": 2,
+      "logo": "osama-logo.jpg",      
+      "cover":"osama.jpg",
+      "price": 50,      
+      "shortName": "Osama Tacos Árabes",
+      "shortDescription": "$850.00 - $1199.99",
+      "description": "$850.00 - $1199.99",
+      "starProduct": {
+        "name": "Hamburguesa Country",
+        "description": "Deliciosa amburguesa angus 200 gr",
+        "picture": "hamburguerContry.jpg"
+      },
+      "category": "Restaurante",
+      "contactInfo": {
+        "phoneNumber": "999999999",
+        "whatsapp": "999999999",
+        "email": "tiendita@gmail.com",
+        "adress": "New Street 34, Santa Lucía, Cuahutemoc, Distrito Federal",
+        "direction": "2134123412, 1234123412"
+      },
+      "promo": null,
+      "online": "false",
+      "loveBar": {
+        "rating": 8.5,
+        "likes": 987,
+        "dislikes": 342,
+        "clients":2344
       },
       "owner": {
         "id": "",

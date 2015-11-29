@@ -48,7 +48,7 @@
                 <div class="col-xs-12" data-ng-controller="directoryCtrl as dirctrl">
                     <div class="row">
                         <!-- Directory -->
-                        <div class="company col-xs-12 col-md-6 col-lg-4" data-ng-repeat="company in dirctrl.result.list">
+                        <div class="company col-xs-12 col-sm-6 col-md-4 col-lg-3" data-ng-repeat="company in dirctrl.result.list">
                             <div class="card">
                                 <div class="offer" data-ng-if="company.promo && company.promo.name !== ''">
                                     <a><span class="zmdi zmdi-local-offer"></span>{{company.promo.name}}</a>
