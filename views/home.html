@@ -8,7 +8,7 @@
 
     <section id="content">
 
-        <div class="container">
+        <div class="container" data-ng-hide="mactrl.selected">
             <div class="block-header">
                 <h2>Tiendas cerca de ti</h2>
 
@@ -48,13 +48,13 @@
                 <div class="col-xs-12" data-ng-controller="directoryCtrl as dirctrl">
                     <div class="row">
                         <!-- Directory -->
-                        <div class="company col-xs-12 col-sm-6 col-md-4 col-lg-3" data-ng-repeat="company in dirctrl.result.list">
-                            <div class="card">
-                                <div class="offer" data-ng-if="company.promo && company.promo.name !== ''">
+                        <div class="company col-xs-12 col-sm-6 col-md-4 col-lg-3" data-ng-repeat="company in dirctrl.result.list" data-ng-click="mactrl.selected = company">
+                            <div class="card" data-ng-class="{ 'promo': company.promo && company.promo.name !== '' }">
+                                <div class="promo" data-ng-if="company.promo && company.promo.name !== ''">
                                     <a><span class="zmdi zmdi-local-offer"></span>{{company.promo.name}}</a>
                                 </div>
                                 <div class="brand-header">
-                                    <a class="text-center"><img src="img/custom/logos/{{company.id}}/{{company.logo}}"/></a>
+                                    <a class="text-center"><img alt="{{company.shortName" with="80" height="80" src="img/custom/logos/{{company.id}}/{{company.logo}}"/></a>
                                 </div>
                                 <div class="card-cover" data-ng-style="{'background-image':'url(img/custom/covers/' + company.id +'/' + company.cover + ')'}">
                                     <span class="short-name">{{company.shortName}}</span>
@@ -67,24 +67,92 @@
                                     </div>
                                     <ul class="card-data">
                                         <li class="love">
-                                            <span class="zmdi zmdi-wifi"></span>{{company.loveBar.likes}}
+                                            <span class="zmdi zmdi-favorite"></span>{{company.loveBar.likes}}
                                         </li><li class="rating">
                                             <span class="zmdi zmdi-star"></span>{{company.loveBar.rating}}
                                         </li><li class="clients">
                                             <span class="zmdi zmdi-account"></span>{{company.loveBar.clients}}
                                         </li><li class="price">
                                             <span class="zmdi zmdi-money-box"></span>${{company.price}}</li>
-                                    <div>
+                                    </ul>
                                 </div>
-                            </div>
-                            <div class="card-detail">
-
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <div class="container detail" data-ng-show="mactrl.selected">   
+
+            <!-- Detail -->
+            <div class="card" data-ng-class="{ 'promo': mactrl.selected.promo && mactrl.selected.promo.name !== '' }">
+                <div class="promo" data-ng-if="mactrl.selected.promo && mactrl.selected.promo.name !== ''">
+                    <a><span class="zmdi zmdi-local-offer"></span>{{mactrl.selected.promo.name}}</a>
+                </div>
+                <div class="card-cover" data-ng-style="{'background-image':'url(img/custom/covers/' + mactrl.selected.id +'/' + mactrl.selected.cover + ')'}">
+                    <span class="short-name">{{mactrl.selected.shortName}}</span>                    
+                </div>
+                <div class="card-body">
+                    <div class="brand-header">
+                        <a class="text-center"><img alt="{{mactrl.selected.shortName" with="80" height="80" src="img/custom/logos/{{mactrl.selected.id}}/{{mactrl.selected.logo}}"/></a>
+                    </div>
+                    <a  class="star-product"><span class="zmdi zmdi-star-circle"></span><span>{{mactrl.selected.starProduct.name}} {{mactrl.selected.starProduct.price | currency}}</span></a>
+                    <div class="love-container">
+                        <div class="love-bar" data-ng-style="{'width' : (mactrl.selected.loveBar.likes * 100 / (mactrl.selected.loveBar.likes + mactrl.selected.loveBar.likes)) + '%' }">
+                        </div>
+                    </div>
+                    <ul class="card-data">
+                        <li class="love">
+                            <span class="zmdi zmdi-favorite"></span>{{mactrl.selected.loveBar.likes}}
+                        </li><li class="rating">
+                            <span class="zmdi zmdi-star"></span>{{mactrl.selected.loveBar.rating}}
+                        </li><li class="clients">
+                            <span class="zmdi zmdi-account"></span>{{mactrl.selected.loveBar.clients}}
+                        </li><li class="price">
+                            <span class="zmdi zmdi-money-box"></span>${{mactrl.selected.price}}</li>
+                    </ul>
+                    <div class="contact-info">
+                        <div class="phone">
+                            <div><span class="zmdi zmdi-money-box"></span>{{mactrl.selected.contactInfo.phoneNumber}}</div><div><span class="zmdi zmdi-money-box"></span>{{mactrl.selected.contactInfo.whatsapp}}</div>
+                        </div>
+                        <div></div>
+                        <div class="contact"><span class="zmdi zmdi-money-box"></span>{{mactrl.selected.contactInfo.contact}}</div>
+                        <div class="address"><span class="zmdi zmdi-money-box"></span>{{mactrl.selected.contactInfo.address}}</div>
+                        <div class="event"><span class="zmdi zmdi-money-box"></span>{{mactrl.selected.event}}</div>
+                        <div class="opening-times">
+                            <span class="zmdi zmdi-money-box"></span>
+                            <table>
+                                <thead>
+                                    <th>
+                                        <td>L</td>
+                                        <td>M</td>
+                                        <td>M</td>
+                                        <td>J</td>
+                                        <td>V</td>
+                                        <td>S</td>
+                                        <td>D</td>
+                                    </th>
+                                </thead>                                    
+                                <tbody>
+                                    <tr>
+                                        <td>8:20</td>
+                                        <td>8:20</td>
+                                        <td>8:20</td>
+                                        <td>8:20</td>
+                                        <td>8:20</td>
+                                        <td>8:20</td>
+                                        <td>8:20</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
     </section>
 </section>
 

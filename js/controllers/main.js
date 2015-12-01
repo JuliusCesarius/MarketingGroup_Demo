@@ -3,7 +3,7 @@ materialAdmin
     // Base controller for common functions
     // =========================================================================
 
-    .controller('materialadminCtrl', function($timeout, $state, growlService){
+    .controller('materialadminCtrl', function($rootScope, $timeout, $state, growlService){
         //Welcome Message
         growlService.growl('Welcome back Mallinda!', 'inverse')
         
@@ -32,6 +32,8 @@ materialAdmin
             }
         }
         
+        $rootScope.selected = null;
+
         //Listview Search (Check listview pages)
         this.listviewSearchStat = false;
         
@@ -162,7 +164,7 @@ materialAdmin
     // Best Selling Widget
     // =========================================================================
 
-    .controller('directoryCtrl', function(directoryService){
+    .controller('directoryCtrl', function($rootScope, directoryService){
         // Get Best Selling widget Data
         this.img = directoryService.img;
         this.name = directoryService.name;

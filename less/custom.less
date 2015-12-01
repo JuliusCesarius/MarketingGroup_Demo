@@ -1,0 +1,276 @@
+
+/*Starts Crash_Dev defined code*/
+
+#header{
+	border-top:5px solid #FEE600;
+	background-color:black;
+	padding-top:0;
+	border-bottom:1px solid #222;
+}
+
+#content{
+	background-color:#171717;
+}
+
+#footer{
+	background-color: #000000;
+	bottom: 0px;
+	color: #FEE600;
+	height: 45px;
+	padding-top:1em;
+	position: fixed;
+	width: 100%;
+	z-index: 3;
+}
+#footer .f-menu{
+	display:none;
+}
+
+#menu-trigger{
+	/* display:none; */
+}
+
+#toggle-width{
+	/*display:none;*/
+}
+
+#top-search-wrap{
+	background-color: #FEE600;
+	margin-top:-5px!important;
+}
+
+#top-search-wrap input{
+	background-color: rgba(255,255,255,.5)!important;
+}
+
+#yellowUpperBar{ 
+	height: 10px;
+	background-color: #ffec50;
+}
+
+#sidebar{
+	background-color:#282828;
+	color:white;
+	.main-menu{
+		margin-top: 0;
+		> li > a {
+			color:#999;
+		}
+	}
+	.profile-menu > a{
+		background:url(../img/custom/magic-wand.jpg) no-repeat left top!important;
+		background-position-y:80%!important;
+		background-size:cover!important;
+	}
+}
+
+#chat{
+	background-color:#282828;
+}
+
+.chat-search{
+	display:none;
+}
+
+.listview:not(.lv-message) .lv-title {
+	color:white;
+}
+
+.chat-title{
+	color:#ccc;
+	font-size:1.1em;
+	padding-left:1.2em;
+	padding-bottom:1.2em;
+	text-transform: uppercase;
+}
+
+.main-menu-title{
+	color:#ccc;
+	font-size:1.1em;
+	padding-left:1.5em;
+	padding-bottom: 1em;
+	padding-top:1em;
+	text-transform: uppercase;
+}
+
+
+/***CARD'S STYLE****/
+.company .card{
+	/* height: 426px; */
+}
+
+.brand-header{
+	background-color:black;
+	color:white;
+	padding: 2.5em 1em 1em 1em;
+	width:100%;
+	a{
+		display:block;
+	}
+}
+
+.star-product{
+	background-color:rgba(0,0,0,.9);
+	display:block;
+	color:white;
+	font-size: 1.2em;
+	padding:.5em;
+} 
+
+
+.zmdi{
+	margin-right: .5em;
+}
+
+.brand-header a img{
+}
+ 
+.card{ 
+	.card-cover{
+		min-height: 256px;
+		background-position: 50% 50%;
+		background-size: cover;
+		overflow: hidden;
+		.short-name, .star-product{
+			background-color:rgba(0,0,0,0);
+			display:block;
+			color:white;
+			font-size: 1.2em;
+			margin-top:-3px;
+			margin-left: -1em;
+			margin-right: -1em;
+			padding-bottom:.5em;
+			text-align:center;
+			width: 112%;
+			-webkit-box-shadow:inset 0 10px 30px 10px #000000;
+			box-shadow: inset 0 14px 22px 6px #000000;
+			&:hover{
+				color: #FEE600;
+				background-color:rgba(0,0,0,.8);
+				cursor:pointer;
+				-webkit-transition: all .1s ease-out;
+				-moz-transition: all .1s ease-out;
+				-ms-transition: all .1s ease-out;
+				-o-transition: all .1s ease-out;
+				transition: all .1s ease-out;
+			}
+		}
+		.star-product{
+			background-color:rgba(0,0,0,.6);
+			bottom: 40px;
+			padding:.5em .8em;
+			position:absolute;
+			text-align:left;
+			-webkit-box-shadow:none;
+			box-shadow:none;
+			margin-left: 0;
+			width: 100%;
+		}
+	}
+
+	&.promo{
+	    outline-style: solid!important;
+	    outline-color: rgba(254, 230, 0, 0.29)!important;
+	    outline-width: 1px!important;
+	    -webkit-transition: all .1s ease-out;
+	    -moz-transition: all .1s ease-out;
+	    -ms-transition: all .1s ease-out;
+	    -o-transition: all .1s ease-out;
+	    transition: all .1s ease-out;
+	    &:hover{	
+			outline-width: 2px!important;
+		    outline-color: #FEE600!important;
+		}
+	}
+
+	.promo{
+		font-size: 1em;
+		font-weight: 600;
+		position:absolute;
+		width:100%;
+		z-index: 2;
+		a{
+			background-color: #FEE600;
+			color: black;
+			display: block;
+			font-family: Arial!important;
+			padding: .3em 1em;
+			-webkit-transition: all .1s ease-out;
+			-moz-transition: all .1s ease-out;
+			-ms-transition: all .1s ease-out;
+			-o-transition: all .1s ease-out;
+			transition: all .1s ease-out;
+			&:hover{
+				background-color:black;
+				color:#FEE600;
+				cursor:pointer;
+				font-size:1.1em;
+			}
+			.zmdi{
+				margin-right:1em;
+			}
+		}
+	}
+
+	.card-data{
+		color:white;
+		background-color:black;
+		padding: .5em .3em;
+		list-style: none;
+		font-size: 1em;
+		.love{
+			.zmdi{
+				color:red;
+			}
+		}
+		.rating{
+			.zmdi{
+				color:#ffec50;
+			}
+		}
+		li{
+			display: inline-block;
+			padding: 0.2em;
+			width: 25%;
+		}
+	}
+
+	.card-body{
+		.love-container{
+			background-color:#ccc;
+			height:4px;
+			width:100%;
+			.love-bar{
+				background-color:red;
+				height:4px;
+			}
+		}
+	}
+}
+
+.container{
+	&.detail{
+		margin-top: -30px;
+		.contact-info{
+			background-color:black;
+		}
+	}
+}
+
+
+
+@media screen and (max-width:320px) {
+	.mobile-fix{
+		margin-right:0;
+		margin-left:0;
+	}
+	.container{
+		&.detail{
+			padding: 0;
+		}
+	}
+}
+/*Screen MD*/
+@media screen and (min-width:992px) {	
+
+}
