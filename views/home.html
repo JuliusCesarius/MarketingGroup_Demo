@@ -91,12 +91,12 @@
                     <a><span class="zmdi zmdi-local-offer"></span>{{mactrl.selected.promo.name}}</a>
                 </div>
                 <div class="card-cover" data-ng-style="{'background-image':'url(img/custom/covers/' + mactrl.selected.id +'/' + mactrl.selected.cover + ')'}">
-                    <span class="short-name">{{mactrl.selected.shortName}}</span>                    
-                </div>
-                <div class="card-body">
                     <div class="brand-header">
                         <a class="text-center"><img alt="{{mactrl.selected.shortName" with="80" height="80" src="img/custom/logos/{{mactrl.selected.id}}/{{mactrl.selected.logo}}"/></a>
+                        <span class="big-short-name">{{mactrl.selected.shortName}}</span>
                     </div>
+                </div>
+                <div class="card-body">
                     <a  class="star-product"><span class="zmdi zmdi-star-circle"></span><span>{{mactrl.selected.starProduct.name}} {{mactrl.selected.starProduct.price | currency}}</span></a>
                     <div class="love-container">
                         <div class="love-bar" data-ng-style="{'width' : (mactrl.selected.loveBar.likes * 100 / (mactrl.selected.loveBar.likes + mactrl.selected.loveBar.likes)) + '%' }">

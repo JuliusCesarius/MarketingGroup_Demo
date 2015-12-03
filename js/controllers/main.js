@@ -4,9 +4,13 @@ materialAdmin
     // =========================================================================
 
     .controller('materialadminCtrl', function($rootScope, $timeout, $state, growlService){
+
         //Welcome Message
         growlService.growl('Welcome back Mallinda!', 'inverse')
-        
+        $rootScope.selected = {}
+        this.selected = function getSelected(){
+            return $rootScope.selected;
+        }
         
         // Detact Mobile Browser
         if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
@@ -30,9 +34,8 @@ materialAdmin
             if (!angular.element(event.target).parent().hasClass('active')) {
                 this.sidebarToggle.left = false;
             }
-        }
+        }    
         
-        $rootScope.selected = null;
 
         //Listview Search (Check listview pages)
         this.listviewSearchStat = false;
@@ -164,13 +167,16 @@ materialAdmin
     // Best Selling Widget
     // =========================================================================
 
-    .controller('directoryCtrl', function($rootScope, directoryService){
+    .controller('directoryCtrl', function($rootScope, directoryService){        
         // Get Best Selling widget Data
         this.img = directoryService.img;
         this.name = directoryService.name;
         this.range = directoryService.range; 
         
-        this.result = directoryService.getDirectory(this.img, this.name, this.range);
+        this.result = directoryService.getDirectory(this.img, this.name, this.range)
+        this.result.$promise.then(function(r){
+            $rootScope.$$childTail.mactrl.selected = r.list[3]
+        });
     })
 
     // =========================================================================
