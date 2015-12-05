@@ -93,6 +93,11 @@
 	text-transform: uppercase;
 }
 
+.ellipsis{	
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 
 /***CARD'S STYLE****/
 .company .card{
@@ -184,13 +189,14 @@
 	}
 
 	.promo{
-		font-size: 1em;
+		font-size: 1.3em;
 		font-weight: 600;
 		position:absolute;
 		width:100%;
 		z-index: 2;
 		a{
 			background-color: #FEE600;
+			box-shadow: 0 0 10px 0 black;
 			color: black;
 			display: block;
 			font-family: Arial!important;
@@ -220,7 +226,7 @@
 		font-size: 1em;
 		.love{
 			.zmdi{
-				color:red;
+				color:#FF0F3F;
 			}
 		}
 		.rating{
@@ -234,17 +240,20 @@
 			width: 25%;
 		}
 	}
+}
 
-	.card-body{
-		.love-container{
-			background-color:#ccc;
-			height:4px;
-			width:100%;
-			.love-bar{
-				background-color:red;
-				height:4px;
-			}
-		}
+.love-container{
+	background-color:#ccc;
+	height:4px;
+	width:100%;
+	.love-bar{
+		background-color:#FF0F3F;
+		height:4px;
+		-webkit-transition: all 2s ease-out;
+		-moz-transition: all 2s ease-out;
+		-ms-transition: all 2s ease-out;
+		-o-transition: all 2s ease-out;
+		transition: all 2s ease-out;
 	}
 }
 
@@ -261,9 +270,9 @@
 				height: 300px;
 				position: relative;				
 				.brand-header{
-					background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0) 1%, rgba(0,0,0,0.50) 56%, rgba(0,0,0,.8) 100%);
-					background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 1%,rgba(0,0,0,0.50) 56%,rgba(0,0,0,.8) 100%);
-					background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 1%,rgba(0,0,0,0.50) 56%,rgba(0,0,0,.8) 100%);
+					background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0) 1%, rgba(0,0,0,0.50) 56%, rgba(0,0,0,.9) 100%);
+					background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 1%,rgba(0,0,0,0.50) 56%,rgba(0,0,0,.9) 100%);
+					background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 1%,rgba(0,0,0,0.50) 56%,rgba(0,0,0,.9) 100%);
 					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#8c000000',GradientType=0 );
 	    			position: absolute;
 	    			bottom: 0;
@@ -275,22 +284,151 @@
 							box-shadow: 0 0 10px 0 black;
 						}
 					}
-					.big-short-name{
+					.name-container{
 						display: block;
-						font-size: 2em;
-						font-weight: 100;
 						text-align: center;
+						.big-short-name{
+							display: block;
+							font-size: 2em;
+							font-weight: 100;
+							text-align: center;
+						}
+						small{
+							font-size: 1em;
+							padding-top: 0;
+							text-align: center;
+						}
 					}
+				}
+			}
+			.card-data{
+				background: none;
+			    font-size: 1.2em;
+			    max-width: 350px;
+			    margin: 0 auto;
+			    padding: 0;
+				li{
+					text-align: center;
 				}
 			}
 			.card-body{
 				.star-product{
 					background-color: black;
+					font-size: 1.5em;
+					-webkit-transition: all .1s ease-out;
+					-moz-transition: all .1s ease-out;
+					-ms-transition: all .1s ease-out;
+					-o-transition: all .1s ease-out;
+					transition: all .1s ease-out;
+					&:hover{
+						background-color: #111;
+						color:#FEE600;
+						cursor: pointer;
+					}
+					> .zmdi{					
+					    color: #FEE600;					    
+					}
+					small{
+						color: #ccc;
+						font-weight: lighter;
+						padding-left: 2em;
+					}
+					.order{
+					    background: #FEE600;
+					    border-radius: 3px;
+					    color: black;
+					    display: block;
+						font-size: .8em;
+					    font-weight: 600;
+					    padding: 2px 1em;
+					    position:static;
+					    opacity: .8;
+					    right: 1em;
+					    text-align: center;
+					    text-transform: uppercase;
+					    &:hover{
+					    	opacity: 1;
+							-webkit-transition: all .1s ease-out;
+							-moz-transition: all .1s ease-out;
+							-ms-transition: all .1s ease-out;
+							-o-transition: all .1s ease-out;
+							transition: all .1s ease-out;
+					    }
+					}
+
+				}
+			}			
+			.contact-info{
+				font-family: roboto;
+				background-color:#171717;
+				color: #999;
+				font-size: 1.2em;
+				> div{
+					padding: .7em 1em;
+					> span{
+						font-size: 1.4em;
+						font-weight: lighter;
+					}
+					> label{
+    					font-weight: lighter;
+    					vertical-align: top;    					
+						overflow: hidden;
+						text-overflow: ellipsis;
+						white-space: nowrap;
+						width: 85%;
+					}
+
+				}
+				.qualify{
+					display: none;
+				}
+				.phone{
+					padding: 0;
+					> div{
+    					border-top: 1px solid #333;
+    					border-bottom: 1px solid #111;
+    					border-left: 1px solid #222;
+						display:inline-block;
+						font-size: 2em;
+					    padding: .2em 1em;
+					    text-align: center;
+						width: 33.33%;
+						&:hover{
+							background-color: black;
+							color: white;
+							cursor: pointer;
+							-webkit-transition: all .2s ease-out;
+							-moz-transition: all .2s ease-out;
+							-ms-transition: all .2s ease-out;
+							-o-transition: all .2s ease-out;
+							transition: all .2s ease-out;
+						}
+						> .zmdi{
+							font-size: 1em;
+							margin:0;
+						}
+						> label{
+							font-size: .5em;
+							font-weight: 300;
+							position: relative;
+							top:-5px;
+						}
+					}
+				}
+				.opening-times{
+					table{
+						font-size: .8em;
+						text-align: center;
+						width: 100%;
+					}
 				}
 			}
 		}
-		.contact-info{
-			background-color:black;
+	}
+	.love-container{
+		height:5px;
+		.love-bar{
+			height:5px;
 		}
 	}
 }
@@ -343,6 +481,21 @@
 							}
 						}
 					}
+				}
+				.card-body{
+					.star-product{
+						.order{
+							display: inline-block;
+							position: absolute;
+						}
+						&:hover{
+							padding-left: 2em;
+						}
+					}
+				}
+				.card-data{
+					margin-top:-20px;
+					margin-left:90px;
 				}
 				.card-body{
 

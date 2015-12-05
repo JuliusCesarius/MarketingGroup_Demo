@@ -4,6 +4,7 @@
       "id": 1,
       "logo": "burger-logo-sm.png",
       "shortName": "Hamburguesas Artesanales",
+      "slogan": "Lo mejor de las hamburguesas",
       "shortDepromo": "$850.00 - $1199.99",
       "description": "$850.00 - $1199.99",
       "cover":"burger.jpg",
@@ -16,6 +17,7 @@
       },
       "category": "Restaurante",
       "contactInfo": {
+        "contact": "Mr. Burns",
         "phoneNumber": "999999999",
         "whatsapp": "999999999",
         "email": "tiendita@gmail.com",
@@ -50,7 +52,7 @@
         }
       ],
       "store": {},
-      "event": "",
+      "event": "Amsterdam 218, Hipódromo Condesa",
       "": ""
     },
     {
@@ -59,15 +61,18 @@
       "cover":"osama.jpg",
       "price": 50,      
       "shortName": "Osama Tacos Árabes",
+      "slogan": "Con el cariño de siempre",
       "shortDescription": "$850.00 - $1199.99",
       "description": "$850.00 - $1199.99",
       "starProduct": {
         "name": "Hamburguesa Country",
         "description": "Deliciosa amburguesa angus 200 gr",
-        "picture": "hamburguerContry.jpg"
+        "picture": "hamburguerContry.jpg",
+        "price":"55.00"
       },
       "category": "Restaurante",
       "contactInfo": {
+        "contact": "Mr. Burns",
         "phoneNumber": "999999999",
         "whatsapp": "999999999",
         "email": "tiendita@gmail.com",
@@ -95,13 +100,14 @@
         }
       ],
       "store": {},
-      "event": "",
+      "event": "Amsterdam 218, Hipódromo Condesa",
       "": ""
     },
     {
       "id": 3,
       "logo": "lavid.jpg",
       "shortName": "Hamburguesas Artesanales",
+      "slogan": "Lo mejor de las hamburguesas",      
       "shortDepromo": "$850.00 - $1199.99",
       "description": "$850.00 - $1199.99",
       "cover":"bife.jpg",
@@ -114,6 +120,7 @@
       },
       "category": "Restaurante",
       "contactInfo": {
+        "contact": "Mr. Burns",
         "phoneNumber": "999999999",
         "whatsapp": "999999999",
         "email": "tiendita@gmail.com",
@@ -141,7 +148,7 @@
         }
       ],
       "store": {},
-      "event": "",
+      "event": "Amsterdam 218, Hipódromo Condesa",
       "": ""
     },
     {
@@ -150,17 +157,20 @@
       "cover":"osama.jpg",
       "price": 50,      
       "shortName": "Osama Tacos Árabes",
+      "slogan": "Lo mejor en tacos árabes",
       "shortDescription": "$850.00 - $1199.99",
       "description": "$850.00 - $1199.99",
       "starProduct": {
         "name": "Hamburguesa Country",
         "description": "Deliciosa amburguesa angus 200 gr",
-        "picture": "hamburguerContry.jpg"
+        "picture": "hamburguerContry.jpg",        
+        "price":"55.00"
       },
       "category": "Restaurante",
       "contactInfo": {
-        "phoneNumber": "999999999",
-        "whatsapp": "999999999",
+        "contact": "Mr. Burns",
+        "phoneNumber": "999 999999",
+        "whatsapp": "999 999999",
         "email": "tiendita@gmail.com",
         "address": "New Street 34, Santa Lucía, Cuahutemoc, Distrito Federal",
         "direction": "2134123412, 1234123412"
@@ -193,7 +203,7 @@
         }
       ],
       "store": {},
-      "event": "",
+      "event": "Amsterdam 218, Hipódromo Condesa",
       "": ""
     },
     {
@@ -212,6 +222,7 @@
       },
       "category": "Restaurante",
       "contactInfo": {
+        "contact": "Mr. Burns",
         "phoneNumber": "999999999",
         "whatsapp": "999999999",
         "email": "tiendita@gmail.com",
@@ -239,7 +250,7 @@
         }
       ],
       "store": {},
-      "event": "",
+      "event": "Amsterdam 218, Hipódromo Condesa",
       "": ""
     },
     {
@@ -291,7 +302,7 @@
         }
       ],
       "store": {},
-      "event": "",
+      "event": "Amsterdam 218, Hipódromo Condesa",
       "": ""
     }
   ]

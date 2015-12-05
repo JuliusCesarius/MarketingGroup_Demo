@@ -62,7 +62,7 @@
                                 </div>
                                 <div class="card-body">
                                     <div class="love-container">
-                                        <div class="love-bar" data-ng-style="{'width' : (company.loveBar.likes * 100 / (company.loveBar.likes + company.loveBar.likes)) + '%' }">
+                                        <div class="love-bar" style="width:0%" data-ng-style="{'width' : (company.loveBar.likes * 100 / (company.loveBar.likes + company.loveBar.likes)) + '%' }">
                                         </div>
                                     </div>
                                     <ul class="card-data">
@@ -93,38 +93,44 @@
                 <div class="card-cover" data-ng-style="{'background-image':'url(img/custom/covers/' + mactrl.selected.id +'/' + mactrl.selected.cover + ')'}">
                     <div class="brand-header">
                         <a class="text-center"><img alt="{{mactrl.selected.shortName" with="80" height="80" src="img/custom/logos/{{mactrl.selected.id}}/{{mactrl.selected.logo}}"/></a>
-                        <span class="big-short-name">{{mactrl.selected.shortName}}</span>
+                        <div class="name-container">
+                            <span class="big-short-name">{{mactrl.selected.shortName}}</span>
+                            <small>{{mactrl.selected.slogan}}</small>
+                            <ul class="card-data">
+                                <li class="love">
+                                    <span class="zmdi zmdi-favorite"></span>{{mactrl.selected.loveBar.likes}}
+                                </li><li class="rating">
+                                    <span class="zmdi zmdi-star"></span>{{mactrl.selected.loveBar.rating}}
+                                </li><li class="clients">
+                                    <span class="zmdi zmdi-account"></span>{{mactrl.selected.loveBar.clients}}
+                                </li><li class="price">
+                                    <span class="zmdi zmdi-money-box"></span>${{mactrl.selected.price}}</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="card-body">
-                    <a  class="star-product"><span class="zmdi zmdi-star-circle"></span><span>{{mactrl.selected.starProduct.name}} {{mactrl.selected.starProduct.price | currency}}</span></a>
                     <div class="love-container">
-                        <div class="love-bar" data-ng-style="{'width' : (mactrl.selected.loveBar.likes * 100 / (mactrl.selected.loveBar.likes + mactrl.selected.loveBar.likes)) + '%' }">
+                        <div class="love-bar" style="width:0%" data-ng-style="{'width' : (mactrl.selected.loveBar.likes * 100 / (mactrl.selected.loveBar.likes + mactrl.selected.loveBar.likes)) + '%' }">
                         </div>
-                    </div>
-                    <ul class="card-data">
-                        <li class="love">
-                            <span class="zmdi zmdi-favorite"></span>{{mactrl.selected.loveBar.likes}}
-                        </li><li class="rating">
-                            <span class="zmdi zmdi-star"></span>{{mactrl.selected.loveBar.rating}}
-                        </li><li class="clients">
-                            <span class="zmdi zmdi-account"></span>{{mactrl.selected.loveBar.clients}}
-                        </li><li class="price">
-                            <span class="zmdi zmdi-money-box"></span>${{mactrl.selected.price}}</li>
-                    </ul>
+                    </div>                    
+                    <a  class="star-product"><span class="zmdi zmdi-star-circle"></span><span>{{mactrl.selected.starProduct.name}} {{mactrl.selected.starProduct.price | currency}}<small class="hidden-xs"><span class="zmdi zmdi-account"></span> 200 han ordenado</small></span><span class="order">Ordenar <span class="hidden-xs">ahora!<span></span></a>
                     <div class="contact-info">
                         <div class="phone">
-                            <div><span class="zmdi zmdi-money-box"></span>{{mactrl.selected.contactInfo.phoneNumber}}</div><div><span class="zmdi zmdi-money-box"></span>{{mactrl.selected.contactInfo.whatsapp}}</div>
+                            <div><span class="zmdi zmdi-phone"></span><label class="hidden-xs">{{mactrl.selected.contactInfo.phoneNumber}}</label></div><div><span class="zmdi zmdi-globe"></span><label class="hidden-xs">{{mactrl.selected.contactInfo.whatsapp}}</label></div><div><span class="zmdi zmdi-pin"></span><label class="ellipsis hidden-xs">{{mactrl.selected.contactInfo.address}}</label></div>
                         </div>
-                        <div></div>
-                        <div class="contact"><span class="zmdi zmdi-money-box"></span>{{mactrl.selected.contactInfo.contact}}</div>
-                        <div class="address"><span class="zmdi zmdi-money-box"></span>{{mactrl.selected.contactInfo.address}}</div>
-                        <div class="event"><span class="zmdi zmdi-money-box"></span>{{mactrl.selected.event}}</div>
+                        <div class="qualify">
+                            <div><span class="favorite"></span><label></label></div>
+                            <div><span class="favorite"></span><label></label></div>
+                        </div>
+                        <div class="contact"><span class="zmdi zmdi-money-box"></span><label>{{mactrl.selected.contactInfo.contact}}</label></div>
+                        <div class="address"><span class="zmdi zmdi-pin"></span><label>{{mactrl.selected.contactInfo.address}}</label></div>
+                        <div class="event"><span class="zmdi zmdi-calendar"></span><label>{{mactrl.selected.event}}</label></div>
                         <div class="opening-times">
-                            <span class="zmdi zmdi-money-box"></span>
-                            <table>
-                                <thead>
-                                    <th>
+                            <span class="zmdi zmdi-time"></span>
+                            <label>
+                                <table>
+                                    <thead>
                                         <td>L</td>
                                         <td>M</td>
                                         <td>M</td>
@@ -132,20 +138,20 @@
                                         <td>V</td>
                                         <td>S</td>
                                         <td>D</td>
-                                    </th>
-                                </thead>                                    
-                                <tbody>
-                                    <tr>
-                                        <td>8:20</td>
-                                        <td>8:20</td>
-                                        <td>8:20</td>
-                                        <td>8:20</td>
-                                        <td>8:20</td>
-                                        <td>8:20</td>
-                                        <td>8:20</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                                    </thead>                                    
+                                    <tbody>
+                                        <tr>
+                                            <td>8:20</td>
+                                            <td>8:20</td>
+                                            <td>8:20</td>
+                                            <td>8:20</td>
+                                            <td>8:20</td>
+                                            <td>8:20</td>
+                                            <td>8:20</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </label>
                         </div>
                     </div>
                 </div>
