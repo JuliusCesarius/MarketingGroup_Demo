@@ -6,7 +6,7 @@
       "shortName": "Hamburguesas Artesanales",
       "slogan": "Lo mejor de las hamburguesas",
       "shortDepromo": "$850.00 - $1199.99",
-      "description": "$850.00 - $1199.99",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctu.",
       "cover":"burger.jpg",
       "price": 50,
       "starProduct": {
@@ -63,7 +63,7 @@
       "shortName": "Osama Tacos Árabes",
       "slogan": "Con el cariño de siempre",
       "shortDescription": "$850.00 - $1199.99",
-      "description": "$850.00 - $1199.99",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctu.",
       "starProduct": {
         "name": "Hamburguesa Country",
         "description": "Deliciosa amburguesa angus 200 gr",
@@ -100,7 +100,7 @@
         }
       ],
       "store": {},
-      "event": "Amsterdam 218, Hipódromo Condesa",
+      "event": "Alan Salomon Ft. Alessa",
       "": ""
     },
     {
@@ -109,7 +109,7 @@
       "shortName": "Hamburguesas Artesanales",
       "slogan": "Lo mejor de las hamburguesas",      
       "shortDepromo": "$850.00 - $1199.99",
-      "description": "$850.00 - $1199.99",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctu.",
       "cover":"bife.jpg",
       "price": 50,
       "starProduct": {
@@ -159,7 +159,7 @@
       "shortName": "Osama Tacos Árabes",
       "slogan": "Lo mejor en tacos árabes",
       "shortDescription": "$850.00 - $1199.99",
-      "description": "$850.00 - $1199.99",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctu.",
       "starProduct": {
         "name": "Hamburguesa Country",
         "description": "Deliciosa amburguesa angus 200 gr",
@@ -202,7 +202,17 @@
           "Domingo": "9 pm - 12 pm"
         }
       ],
-      "store": {},
+      "store": [
+        {
+          "id": 1,
+          "rating" : 4,
+          "img" : "rsz_falafel1.jpg",
+          "name" : "Falafel Especial Magnum",
+          "detail" : "Angus 23lb, salsa especial, chimichurri",
+          "price" : 39.00,
+          "delivery" : "55 min"
+        }
+      ],
       "event": "Amsterdam 218, Hipódromo Condesa",
       "": ""
     },

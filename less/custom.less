@@ -99,6 +99,15 @@
   white-space: nowrap;
 }
 
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 /***CARD'S STYLE****/
 .company .card{
 	/* height: 426px; */
@@ -249,11 +258,11 @@
 	.love-bar{
 		background-color:#FF0F3F;
 		height:4px;
-		-webkit-transition: all 2s ease-out;
-		-moz-transition: all 2s ease-out;
-		-ms-transition: all 2s ease-out;
-		-o-transition: all 2s ease-out;
-		transition: all 2s ease-out;
+		-webkit-transition: all 3s ease-out;
+		-moz-transition: all 3s ease-out;
+		-ms-transition: all 3s ease-out;
+		-o-transition: all 3s ease-out;
+		transition: all 3s ease-out;
 	}
 }
 
@@ -364,10 +373,17 @@
 				color: #999;
 				font-size: 1.2em;
 				> div{
+					cursor: pointer;
 					padding: .7em 1em;
+					-webkit-transition: all .5s ease-out;
+					-moz-transition: all .5s ease-out;
+					-ms-transition: all .5s ease-out;
+					-o-transition: all .5s ease-out;
+					transition: all .5s ease-out;
 					> span{
 						font-size: 1.4em;
 						font-weight: lighter;
+						line-height: 21px;
 					}
 					> label{
     					font-weight: lighter;
@@ -376,6 +392,15 @@
 						text-overflow: ellipsis;
 						white-space: nowrap;
 						width: 85%;
+						&:hover{
+							text-overflow: none;
+							white-space: normal;
+						}
+					}
+					&:hover{
+						background-color: #ccc;
+    					color: #262626;
+    					font-weight: bold;
 					}
 
 				}
@@ -384,6 +409,9 @@
 				}
 				.phone{
 					padding: 0;
+					&:hover{
+						background-color:#171717;
+					}
 					> div{
     					border-top: 1px solid #333;
     					border-bottom: 1px solid #111;
@@ -414,6 +442,9 @@
 							top:-5px;
 						}
 					}
+				}
+				.map{
+					padding: 0;
 				}
 				.opening-times{
 					table{

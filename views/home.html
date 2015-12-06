@@ -117,14 +117,17 @@
                     <a  class="star-product"><span class="zmdi zmdi-star-circle"></span><span>{{mactrl.selected.starProduct.name}} {{mactrl.selected.starProduct.price | currency}}<small class="hidden-xs"><span class="zmdi zmdi-account"></span> 200 han ordenado</small></span><span class="order">Ordenar <span class="hidden-xs">ahora!<span></span></a>
                     <div class="contact-info">
                         <div class="phone">
-                            <div><span class="zmdi zmdi-phone"></span><label class="hidden-xs">{{mactrl.selected.contactInfo.phoneNumber}}</label></div><div><span class="zmdi zmdi-globe"></span><label class="hidden-xs">{{mactrl.selected.contactInfo.whatsapp}}</label></div><div><span class="zmdi zmdi-pin"></span><label class="ellipsis hidden-xs">{{mactrl.selected.contactInfo.address}}</label></div>
+                            <div><span class="zmdi zmdi-phone"></span><label class="hidden-xs">{{mactrl.selected.contactInfo.phoneNumber}}</label></div><div><span class="zmdi zmdi-whatsapp"></span><label class="hidden-xs">{{mactrl.selected.contactInfo.whatsapp}}</label></div><div><span class="zmdi zmdi-directions"></span><label class="ellipsis hidden-xs">{{mactrl.selected.contactInfo.address}}</label></div>
                         </div>
                         <div class="qualify">
                             <div><span class="favorite"></span><label></label></div>
                             <div><span class="favorite"></span><label></label></div>
                         </div>
-                        <div class="contact"><span class="zmdi zmdi-money-box"></span><label>{{mactrl.selected.contactInfo.contact}}</label></div>
-                        <div class="address"><span class="zmdi zmdi-pin"></span><label>{{mactrl.selected.contactInfo.address}}</label></div>
+                        <div class="contact"><span class="zmdi zmdi-account"></span><label>{{mactrl.selected.contactInfo.contact}}</label></div>
+                        <div class="address" data-ng-click="mactrl.selected.contactInfo.expanded = !mactrl.selected.contactInfo.expanded"><span class="zmdi zmdi-pin"></span><label>{{mactrl.selected.contactInfo.address}}</label></div>
+                        <div class="map" collapse="!mactrl.selected.contactInfo.expanded">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.05536577105!2d-99.17145528557049!3d19.410013646433264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff4069dc500d%3A0x338c7ac5eefcd2b8!2sMr.+Buns!5e0!3m2!1ses!2smx!4v1449378130134" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
                         <div class="event"><span class="zmdi zmdi-calendar"></span><label>{{mactrl.selected.event}}</label></div>
                         <div class="opening-times">
                             <span class="zmdi zmdi-time"></span>
@@ -153,7 +156,22 @@
                                 </table>
                             </label>
                         </div>
+                        <div class="about"><span class="zmdi zmdi-bookmark"></span><label>{{mactrl.selected.description}}</label></div>                        
                     </div>
+                    <div class="products">
+                        <span class="zmdi zmdi-shopping-cart"></span>Productos
+                    </div>
+                    <ul class="store row">
+                        <li class="col-xs-12" data-ng-repeat="product in mactrl.selected.store">
+                            <div class="rating zmdi zmdi-star"></div>
+                            <img src="img/custom/products/{{product.img}}">
+                            <label class="name">{{product.name}}</label>
+                            <span class="detail">{{product.detail}}</span>
+                            <span class="price">${{product.price}}</span>
+                            <span class="delivery">{{product.delivery}}</span>
+                            <button class="order" text="Ordenar">Ordenar</button>
+                        </li>
+                    </ul>
                 </div>
             </div>
 
